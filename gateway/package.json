@@ -1,0 +1,17 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "WebSocket Gateway for PINN-Point",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "redis": "^4.6.0",
+    "ws": "^8.0.0"
+  }
+}
