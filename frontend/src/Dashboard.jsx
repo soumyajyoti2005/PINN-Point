@@ -60,7 +60,7 @@ export default function Dashboard({ onBack }) {
       }
     }
     loadNetwork()
-  }, [sourceType])
+  }, [])
 
   useEffect(() => {
     const s = createDataSource(selectedScenario, (event) => {
