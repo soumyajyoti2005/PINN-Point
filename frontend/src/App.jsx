@@ -1,16 +1,3 @@
-import { useState } from 'react'
-import Landing from './Landing'
-import Dashboard from './Dashboard'
-
-function App() {
-  const [route, setRoute] = useState('landing')
-
-  return (
-    <>
-      {route === 'landing' && <Landing onStart={() => setRoute('dashboard')} />}
-      {route === 'dashboard' && <Dashboard onBack={() => setRoute('landing')} />}
-    </>
-  )
-}
-
-export default App
+import React from'react';import Landing from'./Landing';import Dashboard from'./Dashboard';import NetworkPage from'./NetworkPage';import RunnerPage from'./RunnerPage';import ReportsPage from'./ReportsPage';import AppShell from'./components/AppShell';import{DataProvider}from'./providers/DataProvider';import{useRoute}from'./router';
+function Routed(){const route=useRoute();if(route==='/'||route==='/landing')return <Landing/>;const pages={'/dashboard':<Dashboard/>,'/network':<NetworkPage/>,'/runner':<RunnerPage/>,'/reports':<ReportsPage/>};return <AppShell route={route}>{pages[route]||<Dashboard/>}</AppShell>}
+export default function App(){return <DataProvider><Routed/></DataProvider>}

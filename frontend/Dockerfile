@@ -1,12 +1,11 @@
 FROM node:20-alpine
 
-WORKDIR /app/frontend
+WORKDIR /app
 
-COPY frontend/package*.json ./
+COPY package*.json ./
 RUN npm install
 
-COPY frontend/ ./
-COPY contracts/ ../contracts/
+COPY . .
 
 # Build the frontend to static files
 RUN npm run build

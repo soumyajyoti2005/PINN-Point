@@ -1,0 +1,1 @@
+import fixture from'../mock/reports.json';export async function getMetrics(){const base=import.meta.env.VITE_API_URL;if(!base)return fixture;try{const r=await fetch(`${base}/api/v1/reports/metrics?split=test`);return r.ok?await r.json():fixture}catch{return fixture}}
