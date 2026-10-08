@@ -1,0 +1,206 @@
+services:
+  postgres:
+    image: postgis/postgis:15-3.4
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?set POSTGRES_DB in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - pinnpoint_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  influxdb:
+    image: influxdb:2.7
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: ${INFLUXDB_INIT_MODE:?set INFLUXDB_INIT_MODE in .env}
+      DOCKER_INFLUXDB_INIT_USERNAME: ${INFLUXDB_INIT_USERNAME:?set INFLUXDB_INIT_USERNAME in .env}
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${INFLUXDB_INIT_PASSWORD:?set INFLUXDB_INIT_PASSWORD in .env}
+      DOCKER_INFLUXDB_INIT_ORG: ${INFLUXDB_INIT_ORG:?set INFLUXDB_INIT_ORG in .env}
+      DOCKER_INFLUXDB_INIT_BUCKET: ${INFLUXDB_INIT_BUCKET:?set INFLUXDB_INIT_BUCKET in .env}
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${INFLUXDB_INIT_ADMIN_TOKEN:?set INFLUXDB_INIT_ADMIN_TOKEN in .env}
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - influxdb_config:/etc/influxdb2
+    networks:
+      - pinnpoint_net
+    healthcheck:
+      test: ["CMD", "influx", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    ports:
+      - "127.0.0.1:${MQTT_HOST_PORT:?set MQTT_HOST_PORT in .env}:1883"
+    volumes:
+      - ./infra/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_log:/mosquitto/log
+    networks:
+      - pinnpoint_net
+    healthcheck:
+      test: ["CMD-SHELL", "mosquitto_sub -t '$$SYS/broker/version' -C 1 -W 5 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+    networks:
+      - pinnpoint_net
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./backend
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST:?set POSTGRES_HOST in .env}
+      POSTGRES_PORT: ${POSTGRES_PORT:?set POSTGRES_PORT in .env}
+      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?set POSTGRES_DB in .env}
+      INFLUXDB_HOST: ${INFLUXDB_HOST:?set INFLUXDB_HOST in .env}
+      INFLUXDB_PORT: ${INFLUXDB_PORT:?set INFLUXDB_PORT in .env}
+      INFLUX_TOKEN: ${INFLUXDB_INIT_ADMIN_TOKEN:?set INFLUXDB_INIT_ADMIN_TOKEN in .env}
+      INFLUX_ORG: ${INFLUXDB_INIT_ORG:?set INFLUXDB_INIT_ORG in .env}
+      INFLUX_BUCKET: ${INFLUXDB_INIT_BUCKET:?set INFLUXDB_INIT_BUCKET in .env}
+      REDIS_HOST: ${REDIS_HOST:?set REDIS_HOST in .env}
+      REDIS_PORT: ${REDIS_PORT:?set REDIS_PORT in .env}
+      REDIS_CHANNEL: ${REDIS_CHANNEL:?set REDIS_CHANNEL in .env}
+      MQTT_BROKER: ${MQTT_BROKER:?set MQTT_BROKER in .env}
+      MQTT_PORT: ${MQTT_PORT:?set MQTT_PORT in .env}
+      CORS_ORIGINS: ${CORS_ORIGINS:?set CORS_ORIGINS in .env}
+      API_PORT: ${API_PORT:?set API_PORT in .env}
+      DATA_DIR: ${DATA_DIR:?set DATA_DIR in .env}
+      CONTRACTS_DIR: ${CONTRACTS_DIR:?set CONTRACTS_DIR in .env}
+    ports:
+      - "127.0.0.1:${API_PORT:?set API_PORT in .env}:${API_PORT:?set API_PORT in .env}"
+    volumes:
+      # rw because dataset generation and SWMM files are written here; split into read-only inputs and writable outputs later if needed
+      - ${DATA_HOST_PATH:?set DATA_HOST_PATH in .env}:/data:rw
+      - ${CONTRACTS_HOST_PATH:?set CONTRACTS_HOST_PATH in .env}:/contracts:ro
+    networks:
+      - pinnpoint_net
+    depends_on:
+      postgres:
+        condition: service_healthy
+      influxdb:
+        condition: service_healthy
+      mosquitto:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:${API_PORT}/api/v1/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  gateway:
+    build:
+      context: ./gateway
+    environment:
+      REDIS_HOST: ${REDIS_HOST:?set REDIS_HOST in .env}
+      REDIS_PORT: ${REDIS_PORT:?set REDIS_PORT in .env}
+      REDIS_CHANNEL: ${REDIS_CHANNEL:?set REDIS_CHANNEL in .env}
+      GATEWAY_PORT: ${GATEWAY_PORT:?set GATEWAY_PORT in .env}
+      WS_TOKEN: ${WS_TOKEN:?set WS_TOKEN in .env}
+      CONTRACTS_DIR: ${CONTRACTS_DIR:?set CONTRACTS_DIR in .env}
+    ports:
+      - "127.0.0.1:${GATEWAY_PORT:?set GATEWAY_PORT in .env}:${GATEWAY_PORT:?set GATEWAY_PORT in .env}"
+    volumes:
+      - ${CONTRACTS_HOST_PATH:?set CONTRACTS_HOST_PATH in .env}:/contracts:ro
+    networks:
+      - pinnpoint_net
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:${GATEWAY_PORT}/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  sim:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.sim
+    profiles: ["sim"]
+    environment:
+      DATA_DIR: ${DATA_DIR:?set DATA_DIR in .env}
+      AREA_NAME: ${AREA_NAME:?set AREA_NAME in .env}
+      AREA_CENTER_LAT: ${AREA_CENTER_LAT:?set AREA_CENTER_LAT in .env}
+      AREA_CENTER_LON: ${AREA_CENTER_LON:?set AREA_CENTER_LON in .env}
+      AREA_HALF_SIZE_M: ${AREA_HALF_SIZE_M:?set AREA_HALF_SIZE_M in .env}
+      SWMM_CATCHMENT_HA_PER_NODE: ${SWMM_CATCHMENT_HA_PER_NODE:?set SWMM_CATCHMENT_HA_PER_NODE in .env}
+      SWMM_IMPERVIOUS_PCT: ${SWMM_IMPERVIOUS_PCT:?set SWMM_IMPERVIOUS_PCT in .env}
+      SWMM_PONDED_AREA_M2: ${SWMM_PONDED_AREA_M2:?set SWMM_PONDED_AREA_M2 in .env}
+      DATASET_RUNS: ${DATASET_RUNS}
+      DATASET_SEED: ${DATASET_SEED}
+      DATASET_NAME: ${DATASET_NAME}
+      DATASET_MAX_PEAK_MM_HR: ${DATASET_MAX_PEAK_MM_HR}
+      DATASET_DOUBLE_FRACTION: ${DATASET_DOUBLE_FRACTION}
+      CONTRACTS_DIR: ${CONTRACTS_DIR:?set CONTRACTS_DIR in .env}
+    volumes:
+      - ${DATA_HOST_PATH:?set DATA_HOST_PATH in .env}:/data:rw
+      - ${CONTRACTS_HOST_PATH:?set CONTRACTS_HOST_PATH in .env}:/contracts:ro
+    networks:
+      - pinnpoint_net
+
+  ml:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.ml
+    profiles: ["ml"]
+    environment:
+      DATA_DIR: ${DATA_DIR:?set DATA_DIR in .env}
+      DATASET_NAME: ${DATASET_NAME}
+      CONTRACTS_DIR: ${CONTRACTS_DIR:?set CONTRACTS_DIR in .env}
+    volumes:
+      - ${DATA_HOST_PATH:?set DATA_HOST_PATH in .env}:/data:rw
+      - ${CONTRACTS_HOST_PATH:?set CONTRACTS_HOST_PATH in .env}:/contracts:ro
+    networks:
+      - pinnpoint_net
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    environment:
+      VITE_API_URL: "http://127.0.0.1:${API_PORT:-8000}"
+      VITE_WS_URL: "ws://127.0.0.1:${GATEWAY_PORT:-3001}"
+      VITE_WS_TOKEN: ${WS_TOKEN:-devtoken}
+      VITE_DATA_SOURCE: mock
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./frontend:/app/frontend
+      - ${CONTRACTS_HOST_PATH:-./contracts}:/app/contracts:ro
+    networks:
+      - pinnpoint_net
+
+volumes:
+  postgres_data:
+  influxdb_data:
+  influxdb_config:
+  mosquitto_data:
+  mosquitto_log:
+  redis_data:
+
+networks:
+  pinnpoint_net:

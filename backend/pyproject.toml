@@ -1,0 +1,52 @@
+[project]
+name = "pinnpoint-backend"
+version = "0.1.0"
+description = "PINNpoint Backend API"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.103.0",
+    "uvicorn>=0.23.2",
+    "pydantic>=2.3.0",
+    "pydantic-settings>=2.0.3",
+    "sqlalchemy[asyncio]>=2.0.20",
+    "geoalchemy2>=0.14.1",
+    "alembic>=1.12.0",
+    "psycopg[binary]>=3.1.10",
+    "influxdb-client>=1.37.0",
+    "aiohttp>=3.8.5",
+    "aiomqtt>=2.0.0",
+    "redis>=5.0.0",
+    "httpx>=0.25.0"
+    # later: torch, deepxde, pyswmm, swmmio, osmnx, rasterio, lightgbm
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.2",
+    "pytest-asyncio>=0.21.1"
+]
+sim = [
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "networkx",
+    "osmnx",
+    "rasterio",
+    "pyswmm",
+    "swmmio",
+    "shapely",
+    "lightgbm",
+    "scikit-learn",
+    "jsonschema",
+    "rfc3339-validator"
+]
+ml = [
+    "torch",
+    "scipy",
+    "numpy",
+    "pandas"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

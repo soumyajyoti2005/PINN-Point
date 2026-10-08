@@ -1,0 +1,1626 @@
+{
+  "area": {
+    "name": "kolkata-amherst",
+    "bbox": [
+      22.576839070667607,
+      88.36736779431537,
+      22.581360929332394,
+      88.37223220568463
+    ],
+    "center": [
+      88.3698,
+      22.5791
+    ]
+  },
+  "params": {
+    "outfall_lat": null,
+    "outfall_lon": null,
+    "max_spacing": 100.0,
+    "cover": 1.5,
+    "min_slope": 0.001,
+    "seed": 42
+  },
+  "elevation_source": "copernicus_glo30_dsm_p10_smoothed",
+  "synthetic": true,
+  "note": "drain network is synthetic along OSM roads and is not the real Kolkata drainage",
+  "nodes": [
+    {
+      "id": "MH-009",
+      "lon": 88.3692426,
+      "lat": 22.5778129,
+      "ground_elevation_m": 8.778,
+      "invert_elevation_m": 7.681,
+      "depth_m": 1.096,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 11.798
+    },
+    {
+      "id": "MH-022",
+      "lon": 88.3675842,
+      "lat": 22.5805897,
+      "ground_elevation_m": 9.297,
+      "invert_elevation_m": 8.018,
+      "depth_m": 1.279,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 12.738
+    },
+    {
+      "id": "MH-007",
+      "lon": 88.3696136,
+      "lat": 22.5786458,
+      "ground_elevation_m": 8.79,
+      "invert_elevation_m": 7.581,
+      "depth_m": 1.208,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.786
+    },
+    {
+      "id": "MH-021",
+      "lon": 88.3679595,
+      "lat": 22.5803579,
+      "ground_elevation_m": 9.215,
+      "invert_elevation_m": 7.971,
+      "depth_m": 1.243,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 11.868
+    },
+    {
+      "id": "MH-019",
+      "lon": 88.3683315,
+      "lat": 22.5802167,
+      "ground_elevation_m": 9.12,
+      "invert_elevation_m": 7.93,
+      "depth_m": 1.19,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.237
+    },
+    {
+      "id": "MH-011",
+      "lon": 88.3677069,
+      "lat": 22.5782307,
+      "ground_elevation_m": 8.875,
+      "invert_elevation_m": 7.999,
+      "depth_m": 0.876,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.607
+    },
+    {
+      "id": "MH-006",
+      "lon": 88.3699534,
+      "lat": 22.5794117,
+      "ground_elevation_m": 8.852,
+      "invert_elevation_m": 7.489,
+      "depth_m": 1.363,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.995
+    },
+    {
+      "id": "MH-005",
+      "lon": 88.3701215,
+      "lat": 22.5798014,
+      "ground_elevation_m": 8.942,
+      "invert_elevation_m": 7.442,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 12.334
+    },
+    {
+      "id": "MH-004",
+      "lon": 88.3704739,
+      "lat": 22.5806321,
+      "ground_elevation_m": 8.749,
+      "invert_elevation_m": 7.249,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 12.446
+    },
+    {
+      "id": "MH-023",
+      "lon": 88.3677691,
+      "lat": 22.5813504,
+      "ground_elevation_m": 9.37,
+      "invert_elevation_m": 8.105,
+      "depth_m": 1.265,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.119
+    },
+    {
+      "id": "MH-027",
+      "lon": 88.369414,
+      "lat": 22.5809992,
+      "ground_elevation_m": 9.2,
+      "invert_elevation_m": 7.7,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.4
+    },
+    {
+      "id": "MH-030",
+      "lon": 88.3689115,
+      "lat": 22.5805856,
+      "ground_elevation_m": 9.369,
+      "invert_elevation_m": 7.869,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 11.911
+    },
+    {
+      "id": "MH-025",
+      "lon": 88.3680923,
+      "lat": 22.5807771,
+      "ground_elevation_m": 9.199,
+      "invert_elevation_m": 8.02,
+      "depth_m": 1.179,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 11.476
+    },
+    {
+      "id": "MH-018",
+      "lon": 88.3687484,
+      "lat": 22.5800791,
+      "ground_elevation_m": 9.265,
+      "invert_elevation_m": 7.884,
+      "depth_m": 1.38,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 12.64
+    },
+    {
+      "id": "MH-031",
+      "lon": 88.3685908,
+      "lat": 22.5806785,
+      "ground_elevation_m": 9.401,
+      "invert_elevation_m": 7.904,
+      "depth_m": 1.498,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.147
+    },
+    {
+      "id": "MH-017",
+      "lon": 88.3690945,
+      "lat": 22.5799818,
+      "ground_elevation_m": 9.192,
+      "invert_elevation_m": 7.847,
+      "depth_m": 1.345,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.409
+    },
+    {
+      "id": "MH-020",
+      "lon": 88.3682329,
+      "lat": 22.5802599,
+      "ground_elevation_m": 9.181,
+      "invert_elevation_m": 7.941,
+      "depth_m": 1.24,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.237
+    },
+    {
+      "id": "MH-026",
+      "lon": 88.3696966,
+      "lat": 22.580878,
+      "ground_elevation_m": 8.981,
+      "invert_elevation_m": 7.481,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.239
+    },
+    {
+      "id": "MH-028",
+      "lon": 88.369347,
+      "lat": 22.5810829,
+      "ground_elevation_m": 9.278,
+      "invert_elevation_m": 7.778,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.4
+    },
+    {
+      "id": "MH-001",
+      "lon": 88.3701453,
+      "lat": 22.5812946,
+      "ground_elevation_m": 7.221,
+      "invert_elevation_m": 5.721,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": true,
+      "ground_raw_m": 9.843
+    },
+    {
+      "id": "MH-002",
+      "lon": 88.3706843,
+      "lat": 22.5811061,
+      "ground_elevation_m": 7.568,
+      "invert_elevation_m": 6.068,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 7.025
+    },
+    {
+      "id": "MH-032",
+      "lon": 88.3693368,
+      "lat": 22.5807116,
+      "ground_elevation_m": 9.25,
+      "invert_elevation_m": 7.75,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 11.064
+    },
+    {
+      "id": "MH-029",
+      "lon": 88.3690016,
+      "lat": 22.5808216,
+      "ground_elevation_m": 9.332,
+      "invert_elevation_m": 7.835,
+      "depth_m": 1.497,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 11.726
+    },
+    {
+      "id": "MH-049",
+      "lon": 88.3718067,
+      "lat": 22.5771008,
+      "ground_elevation_m": 8.341,
+      "invert_elevation_m": 7.614,
+      "depth_m": 0.727,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.392
+    },
+    {
+      "id": "MH-048",
+      "lon": 88.3711661,
+      "lat": 22.5772787,
+      "ground_elevation_m": 8.341,
+      "invert_elevation_m": 7.545,
+      "depth_m": 0.795,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.11
+    },
+    {
+      "id": "MH-015",
+      "lon": 88.3699473,
+      "lat": 22.5776172,
+      "ground_elevation_m": 8.474,
+      "invert_elevation_m": 7.727,
+      "depth_m": 0.746,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.866
+    },
+    {
+      "id": "MH-035",
+      "lon": 88.371455,
+      "lat": 22.5812862,
+      "ground_elevation_m": 7.7,
+      "invert_elevation_m": 6.911,
+      "depth_m": 0.788,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 7.632
+    },
+    {
+      "id": "MH-042",
+      "lon": 88.3708019,
+      "lat": 22.5792557,
+      "ground_elevation_m": 8.759,
+      "invert_elevation_m": 7.259,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.901
+    },
+    {
+      "id": "MH-034",
+      "lon": 88.3713878,
+      "lat": 22.5811089,
+      "ground_elevation_m": 8.016,
+      "invert_elevation_m": 6.89,
+      "depth_m": 1.126,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.179
+    },
+    {
+      "id": "MH-040",
+      "lon": 88.3711872,
+      "lat": 22.5803194,
+      "ground_elevation_m": 8.53,
+      "invert_elevation_m": 7.03,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.422
+    },
+    {
+      "id": "MH-047",
+      "lon": 88.3709946,
+      "lat": 22.5773263,
+      "ground_elevation_m": 8.385,
+      "invert_elevation_m": 7.527,
+      "depth_m": 0.859,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.11
+    },
+    {
+      "id": "MH-014",
+      "lon": 88.3697778,
+      "lat": 22.5776643,
+      "ground_elevation_m": 8.671,
+      "invert_elevation_m": 7.709,
+      "depth_m": 0.962,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.123
+    },
+    {
+      "id": "MH-043",
+      "lon": 88.3714415,
+      "lat": 22.5790614,
+      "ground_elevation_m": 8.655,
+      "invert_elevation_m": 7.328,
+      "depth_m": 1.327,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.577
+    },
+    {
+      "id": "MH-037",
+      "lon": 88.3720546,
+      "lat": 22.5807495,
+      "ground_elevation_m": 8.197,
+      "invert_elevation_m": 6.971,
+      "depth_m": 1.227,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 12.454
+    },
+    {
+      "id": "MH-044",
+      "lon": 88.3712483,
+      "lat": 22.5784458,
+      "ground_elevation_m": 8.519,
+      "invert_elevation_m": 7.399,
+      "depth_m": 1.12,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.612
+    },
+    {
+      "id": "MH-039",
+      "lon": 88.3716707,
+      "lat": 22.5798105,
+      "ground_elevation_m": 8.607,
+      "invert_elevation_m": 8.007,
+      "depth_m": 0.6,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_adjusted_m": 8.607,
+      "ground_raw_m": 8.673
+    },
+    {
+      "id": "MH-036",
+      "lon": 88.3718124,
+      "lat": 22.5809326,
+      "ground_elevation_m": 8.225,
+      "invert_elevation_m": 6.939,
+      "depth_m": 1.286,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 12.454
+    },
+    {
+      "id": "MH-003",
+      "lon": 88.3704961,
+      "lat": 22.5806882,
+      "ground_elevation_m": 8.211,
+      "invert_elevation_m": 6.711,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 12.446
+    },
+    {
+      "id": "MH-033",
+      "lon": 88.37123,
+      "lat": 22.5804676,
+      "ground_elevation_m": 8.317,
+      "invert_elevation_m": 6.817,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.15
+    },
+    {
+      "id": "MH-050",
+      "lon": 88.3719503,
+      "lat": 22.5790802,
+      "ground_elevation_m": 8.854,
+      "invert_elevation_m": 7.384,
+      "depth_m": 1.47,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 11.613
+    },
+    {
+      "id": "MH-012",
+      "lon": 88.3674796,
+      "lat": 22.5782915,
+      "ground_elevation_m": 8.752,
+      "invert_elevation_m": 8.023,
+      "depth_m": 0.728,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 7.979
+    },
+    {
+      "id": "MH-024",
+      "lon": 88.36832,
+      "lat": 22.5812567,
+      "ground_elevation_m": 9.411,
+      "invert_elevation_m": 8.163,
+      "depth_m": 1.249,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.763
+    },
+    {
+      "id": "MH-045",
+      "lon": 88.3708146,
+      "lat": 22.5785558,
+      "ground_elevation_m": 8.514,
+      "invert_elevation_m": 7.445,
+      "depth_m": 1.069,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.407
+    },
+    {
+      "id": "MH-008",
+      "lon": 88.3694281,
+      "lat": 22.57822935,
+      "ground_elevation_m": 8.646,
+      "invert_elevation_m": 7.631,
+      "depth_m": 1.015,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.477
+    },
+    {
+      "id": "MH-010",
+      "lon": 88.36846886380916,
+      "lat": 22.577999869817802,
+      "ground_elevation_m": 9.417,
+      "invert_elevation_m": 7.917,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 10.194
+    },
+    {
+      "id": "MH-016",
+      "lon": 88.36960592846937,
+      "lat": 22.57989244424312,
+      "ground_elevation_m": 9.293,
+      "invert_elevation_m": 7.793,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 15.356
+    },
+    {
+      "id": "MH-041",
+      "lon": 88.37096302968982,
+      "lat": 22.57979905293436,
+      "ground_elevation_m": 7.693,
+      "invert_elevation_m": 7.093,
+      "depth_m": 0.6,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_adjusted_m": 7.693,
+      "ground_raw_m": 11.469
+    },
+    {
+      "id": "MH-046",
+      "lon": 88.37109451428653,
+      "lat": 22.577891799845993,
+      "ground_elevation_m": 8.348,
+      "invert_elevation_m": 7.463,
+      "depth_m": 0.885,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.395
+    },
+    {
+      "id": "MH-013",
+      "lon": 88.36984366390251,
+      "lat": 22.578246242386918,
+      "ground_elevation_m": 8.349,
+      "invert_elevation_m": 7.645,
+      "depth_m": 0.704,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 8.484
+    },
+    {
+      "id": "MH-038",
+      "lon": 88.37186088266503,
+      "lat": 22.580279326083968,
+      "ground_elevation_m": 9.451,
+      "invert_elevation_m": 7.951,
+      "depth_m": 1.5,
+      "has_sensor": true,
+      "is_outfall": false,
+      "ground_raw_m": 9.262
+    }
+  ],
+  "pipes": [
+    {
+      "id": "P-009-008",
+      "from_node": "MH-009",
+      "to_node": "MH-008",
+      "length_m": 50.071,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3692426,
+          22.5778129
+        ],
+        [
+          88.3694281,
+          22.57822935
+        ]
+      ]
+    },
+    {
+      "id": "P-022-021",
+      "from_node": "MH-022",
+      "to_node": "MH-021",
+      "length_m": 47.187,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3675842,
+          22.5805897
+        ],
+        [
+          88.3677178,
+          22.5805509
+        ],
+        [
+          88.3679595,
+          22.5803579
+        ]
+      ]
+    },
+    {
+      "id": "P-007-006",
+      "from_node": "MH-007",
+      "to_node": "MH-006",
+      "length_m": 92.034,
+      "diameter_m": 0.45,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3696136,
+          22.5786458
+        ],
+        [
+          88.3699138,
+          22.57932
+        ],
+        [
+          88.3699534,
+          22.5794117
+        ]
+      ]
+    },
+    {
+      "id": "P-021-020",
+      "from_node": "MH-021",
+      "to_node": "MH-020",
+      "length_m": 30.111,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3679595,
+          22.5803579
+        ],
+        [
+          88.3682329,
+          22.5802599
+        ]
+      ]
+    },
+    {
+      "id": "P-019-018",
+      "from_node": "MH-019",
+      "to_node": "MH-018",
+      "length_m": 45.487,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3683315,
+          22.5802167
+        ],
+        [
+          88.368523,
+          22.5801455
+        ],
+        [
+          88.3687484,
+          22.5800791
+        ]
+      ]
+    },
+    {
+      "id": "P-011-010",
+      "from_node": "MH-011",
+      "to_node": "MH-010",
+      "length_m": 82.265,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3677069,
+          22.5782307
+        ],
+        [
+          88.36846886380916,
+          22.577999869817802
+        ]
+      ]
+    },
+    {
+      "id": "P-006-005",
+      "from_node": "MH-006",
+      "to_node": "MH-005",
+      "length_m": 46.643,
+      "diameter_m": 0.45,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3699534,
+          22.5794117
+        ],
+        [
+          88.3701215,
+          22.5798014
+        ]
+      ]
+    },
+    {
+      "id": "P-005-004",
+      "from_node": "MH-005",
+      "to_node": "MH-004",
+      "length_m": 99.203,
+      "diameter_m": 0.6,
+      "slope": 0.00195,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3701215,
+          22.5798014
+        ],
+        [
+          88.3701439,
+          22.5798533
+        ],
+        [
+          88.3704739,
+          22.5806321
+        ]
+      ]
+    },
+    {
+      "id": "P-004-003",
+      "from_node": "MH-004",
+      "to_node": "MH-003",
+      "length_m": 6.641,
+      "diameter_m": 0.6,
+      "slope": 0.08104,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3704739,
+          22.5806321
+        ],
+        [
+          88.3704961,
+          22.5806882
+        ]
+      ]
+    },
+    {
+      "id": "P-023-022",
+      "from_node": "MH-023",
+      "to_node": "MH-022",
+      "length_m": 86.902,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3677691,
+          22.5813504
+        ],
+        [
+          88.3677431,
+          22.5811913
+        ],
+        [
+          88.3676861,
+          22.5808877
+        ],
+        [
+          88.3675842,
+          22.5805897
+        ]
+      ]
+    },
+    {
+      "id": "P-027-026",
+      "from_node": "MH-027",
+      "to_node": "MH-026",
+      "length_m": 32.208,
+      "diameter_m": 0.3,
+      "slope": 0.00681,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.369414,
+          22.5809992
+        ],
+        [
+          88.3696097,
+          22.5808986
+        ],
+        [
+          88.3696966,
+          22.580878
+        ]
+      ]
+    },
+    {
+      "id": "P-030-029",
+      "from_node": "MH-030",
+      "to_node": "MH-029",
+      "length_m": 27.825,
+      "diameter_m": 0.3,
+      "slope": 0.00121,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3689115,
+          22.5805856
+        ],
+        [
+          88.3690016,
+          22.5808216
+        ]
+      ]
+    },
+    {
+      "id": "P-025-021",
+      "from_node": "MH-025",
+      "to_node": "MH-021",
+      "length_m": 48.566,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3680923,
+          22.5807771
+        ],
+        [
+          88.3679595,
+          22.5803579
+        ]
+      ]
+    },
+    {
+      "id": "P-018-017",
+      "from_node": "MH-018",
+      "to_node": "MH-017",
+      "length_m": 37.19,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3687484,
+          22.5800791
+        ],
+        [
+          88.3689888,
+          22.5800057
+        ],
+        [
+          88.3690589,
+          22.5799928
+        ],
+        [
+          88.3690945,
+          22.5799818
+        ]
+      ]
+    },
+    {
+      "id": "P-031-030",
+      "from_node": "MH-031",
+      "to_node": "MH-030",
+      "length_m": 34.509,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3685908,
+          22.5806785
+        ],
+        [
+          88.3689115,
+          22.5805856
+        ]
+      ]
+    },
+    {
+      "id": "P-017-016",
+      "from_node": "MH-017",
+      "to_node": "MH-016",
+      "length_m": 53.929,
+      "diameter_m": 0.45,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3690945,
+          22.5799818
+        ],
+        [
+          88.36960592846937,
+          22.57989244424312
+        ]
+      ]
+    },
+    {
+      "id": "P-020-019",
+      "from_node": "MH-020",
+      "to_node": "MH-019",
+      "length_m": 11.205,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3682329,
+          22.5802599
+        ],
+        [
+          88.3683315,
+          22.5802167
+        ]
+      ]
+    },
+    {
+      "id": "P-026-004",
+      "from_node": "MH-026",
+      "to_node": "MH-004",
+      "length_m": 84.373,
+      "diameter_m": 0.3,
+      "slope": 0.00275,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3696966,
+          22.580878
+        ],
+        [
+          88.3700259,
+          22.5807807
+        ],
+        [
+          88.3704739,
+          22.5806321
+        ]
+      ]
+    },
+    {
+      "id": "P-028-027",
+      "from_node": "MH-028",
+      "to_node": "MH-027",
+      "length_m": 11.573,
+      "diameter_m": 0.3,
+      "slope": 0.00671,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.369347,
+          22.5810829
+        ],
+        [
+          88.369414,
+          22.5809992
+        ]
+      ]
+    },
+    {
+      "id": "P-002-001",
+      "from_node": "MH-002",
+      "to_node": "MH-001",
+      "length_m": 59.176,
+      "diameter_m": 0.6,
+      "slope": 0.00588,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3706843,
+          22.5811061
+        ],
+        [
+          88.3701453,
+          22.5812946
+        ]
+      ]
+    },
+    {
+      "id": "P-032-027",
+      "from_node": "MH-032",
+      "to_node": "MH-027",
+      "length_m": 32.947,
+      "diameter_m": 0.3,
+      "slope": 0.00151,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3693368,
+          22.5807116
+        ],
+        [
+          88.369414,
+          22.5809992
+        ]
+      ]
+    },
+    {
+      "id": "P-029-028",
+      "from_node": "MH-029",
+      "to_node": "MH-028",
+      "length_m": 57.428,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3690016,
+          22.5808216
+        ],
+        [
+          88.3690541,
+          22.580963
+        ],
+        [
+          88.3690905,
+          22.5810784
+        ],
+        [
+          88.3691039,
+          22.5810961
+        ],
+        [
+          88.3691278,
+          22.5810981
+        ],
+        [
+          88.3691937,
+          22.5810959
+        ],
+        [
+          88.369347,
+          22.5810829
+        ]
+      ]
+    },
+    {
+      "id": "P-049-048",
+      "from_node": "MH-049",
+      "to_node": "MH-048",
+      "length_m": 68.683,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3718067,
+          22.5771008
+        ],
+        [
+          88.3714918,
+          22.5771883
+        ],
+        [
+          88.3713415,
+          22.57723
+        ],
+        [
+          88.3711661,
+          22.5772787
+        ]
+      ]
+    },
+    {
+      "id": "P-048-047",
+      "from_node": "MH-048",
+      "to_node": "MH-047",
+      "length_m": 18.387,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3711661,
+          22.5772787
+        ],
+        [
+          88.3709946,
+          22.5773263
+        ]
+      ]
+    },
+    {
+      "id": "P-015-014",
+      "from_node": "MH-015",
+      "to_node": "MH-014",
+      "length_m": 18.174,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3699473,
+          22.5776172
+        ],
+        [
+          88.3697778,
+          22.5776643
+        ]
+      ]
+    },
+    {
+      "id": "P-035-034",
+      "from_node": "MH-035",
+      "to_node": "MH-034",
+      "length_m": 20.887,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.371455,
+          22.5812862
+        ],
+        [
+          88.3713878,
+          22.5811089
+        ]
+      ]
+    },
+    {
+      "id": "P-042-041",
+      "from_node": "MH-042",
+      "to_node": "MH-041",
+      "length_m": 62.905,
+      "diameter_m": 0.45,
+      "slope": 0.00263,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3708019,
+          22.5792557
+        ],
+        [
+          88.37096302968982,
+          22.57979905293436
+        ]
+      ]
+    },
+    {
+      "id": "P-034-033",
+      "from_node": "MH-034",
+      "to_node": "MH-033",
+      "length_m": 73.139,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3713878,
+          22.5811089
+        ],
+        [
+          88.3712649,
+          22.5805883
+        ],
+        [
+          88.37123,
+          22.5804676
+        ]
+      ]
+    },
+    {
+      "id": "P-040-033",
+      "from_node": "MH-040",
+      "to_node": "MH-033",
+      "length_m": 17.055,
+      "diameter_m": 0.45,
+      "slope": 0.01248,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3711872,
+          22.5803194
+        ],
+        [
+          88.3711923,
+          22.5803369
+        ],
+        [
+          88.37123,
+          22.5804676
+        ]
+      ]
+    },
+    {
+      "id": "P-047-046",
+      "from_node": "MH-047",
+      "to_node": "MH-046",
+      "length_m": 63.686,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3709946,
+          22.5773263
+        ],
+        [
+          88.37109451428653,
+          22.577891799845993
+        ]
+      ]
+    },
+    {
+      "id": "P-014-013",
+      "from_node": "MH-014",
+      "to_node": "MH-013",
+      "length_m": 64.137,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3697778,
+          22.5776643
+        ],
+        [
+          88.36984366390251,
+          22.578246242386918
+        ]
+      ]
+    },
+    {
+      "id": "P-043-042",
+      "from_node": "MH-043",
+      "to_node": "MH-042",
+      "length_m": 69.141,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3714415,
+          22.5790614
+        ],
+        [
+          88.3708637,
+          22.5792338
+        ],
+        [
+          88.3708019,
+          22.5792557
+        ]
+      ]
+    },
+    {
+      "id": "P-037-036",
+      "from_node": "MH-037",
+      "to_node": "MH-036",
+      "length_m": 32.138,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3720546,
+          22.5807495
+        ],
+        [
+          88.3718124,
+          22.5809326
+        ]
+      ]
+    },
+    {
+      "id": "P-044-043",
+      "from_node": "MH-044",
+      "to_node": "MH-043",
+      "length_m": 71.268,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3712483,
+          22.5784458
+        ],
+        [
+          88.3713976,
+          22.5789228
+        ],
+        [
+          88.3714415,
+          22.5790614
+        ]
+      ]
+    },
+    {
+      "id": "P-039-038",
+      "from_node": "MH-039",
+      "to_node": "MH-038",
+      "length_m": 55.951,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3716707,
+          22.5798105
+        ],
+        [
+          88.37186088266503,
+          22.580279326083968
+        ]
+      ]
+    },
+    {
+      "id": "P-036-034",
+      "from_node": "MH-036",
+      "to_node": "MH-034",
+      "length_m": 48.086,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3718124,
+          22.5809326
+        ],
+        [
+          88.3716841,
+          22.5810101
+        ],
+        [
+          88.3715267,
+          22.5810636
+        ],
+        [
+          88.3713878,
+          22.5811089
+        ]
+      ]
+    },
+    {
+      "id": "P-003-002",
+      "from_node": "MH-003",
+      "to_node": "MH-002",
+      "length_m": 50.326,
+      "diameter_m": 0.6,
+      "slope": 0.01277,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3704961,
+          22.5806882
+        ],
+        [
+          88.3706843,
+          22.5811061
+        ]
+      ]
+    },
+    {
+      "id": "P-033-003",
+      "from_node": "MH-033",
+      "to_node": "MH-003",
+      "length_m": 79.242,
+      "diameter_m": 0.45,
+      "slope": 0.00134,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.37123,
+          22.5804676
+        ],
+        [
+          88.3704961,
+          22.5806882
+        ]
+      ]
+    },
+    {
+      "id": "P-050-043",
+      "from_node": "MH-050",
+      "to_node": "MH-043",
+      "length_m": 55.626,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3719503,
+          22.5790802
+        ],
+        [
+          88.3717622,
+          22.5791023
+        ],
+        [
+          88.3716899,
+          22.5790356
+        ],
+        [
+          88.3714415,
+          22.5790614
+        ]
+      ]
+    },
+    {
+      "id": "P-012-011",
+      "from_node": "MH-012",
+      "to_node": "MH-011",
+      "length_m": 24.297,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3674796,
+          22.5782915
+        ],
+        [
+          88.3675157,
+          22.5782816
+        ],
+        [
+          88.3677069,
+          22.5782307
+        ]
+      ]
+    },
+    {
+      "id": "P-024-023",
+      "from_node": "MH-024",
+      "to_node": "MH-023",
+      "length_m": 57.52,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.36832,
+          22.5812567
+        ],
+        [
+          88.3680936,
+          22.5812993
+        ],
+        [
+          88.3677691,
+          22.5813504
+        ]
+      ]
+    },
+    {
+      "id": "P-045-044",
+      "from_node": "MH-045",
+      "to_node": "MH-044",
+      "length_m": 46.178,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3708146,
+          22.5785558
+        ],
+        [
+          88.3712483,
+          22.5784458
+        ]
+      ]
+    },
+    {
+      "id": "P-008-007",
+      "from_node": "MH-008",
+      "to_node": "MH-007",
+      "length_m": 50.071,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.3694281,
+          22.57822935
+        ],
+        [
+          88.3696136,
+          22.5786458
+        ]
+      ]
+    },
+    {
+      "id": "P-010-009",
+      "from_node": "MH-010",
+      "to_node": "MH-009",
+      "length_m": 82.265,
+      "diameter_m": 0.3,
+      "slope": 0.00287,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.36846886380916,
+          22.577999869817802
+        ],
+        [
+          88.3692426,
+          22.5778129
+        ]
+      ]
+    },
+    {
+      "id": "P-016-005",
+      "from_node": "MH-016",
+      "to_node": "MH-005",
+      "length_m": 53.929,
+      "diameter_m": 0.45,
+      "slope": 0.00651,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.36960592846937,
+          22.57989244424312
+        ],
+        [
+          88.3701215,
+          22.5798014
+        ]
+      ]
+    },
+    {
+      "id": "P-041-040",
+      "from_node": "MH-041",
+      "to_node": "MH-040",
+      "length_m": 62.905,
+      "diameter_m": 0.45,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.37096302968982,
+          22.57979905293436
+        ],
+        [
+          88.3711872,
+          22.5803194
+        ]
+      ]
+    },
+    {
+      "id": "P-046-044",
+      "from_node": "MH-046",
+      "to_node": "MH-044",
+      "length_m": 63.686,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.37109451428653,
+          22.577891799845993
+        ],
+        [
+          88.3712483,
+          22.5784458
+        ]
+      ]
+    },
+    {
+      "id": "P-013-007",
+      "from_node": "MH-013",
+      "to_node": "MH-007",
+      "length_m": 64.137,
+      "diameter_m": 0.3,
+      "slope": 0.001,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.36984366390251,
+          22.578246242386918
+        ],
+        [
+          88.3696136,
+          22.5786458
+        ]
+      ]
+    },
+    {
+      "id": "P-038-037",
+      "from_node": "MH-038",
+      "to_node": "MH-037",
+      "length_m": 55.951,
+      "diameter_m": 0.3,
+      "slope": 0.01752,
+      "manning_n": 0.013,
+      "coords": [
+        [
+          88.37186088266503,
+          22.580279326083968
+        ],
+        [
+          88.3720546,
+          22.5807495
+        ]
+      ]
+    }
+  ],
+  "summary": {
+    "nodes": 50,
+    "pipes": 49,
+    "total_length_m": 2507.2450592268256
+  }
+}

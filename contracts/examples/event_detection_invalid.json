@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "type": "detection",
+  "detection": {
+    "detection_id": 1001,
+    "ts": "2023-10-27T10:05:00Z",
+    "top_pipe_id": "P-101",
+    "confidence": 1.5,
+    "candidates": [
+      { "pipe_id": "P-101", "score": 0.85 }
+    ]
+  }
+}

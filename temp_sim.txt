@@ -1,0 +1,26 @@
+  sim:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.sim
+    profiles: ["sim"]
+    environment:
+      DATA_DIR: 
+      AREA_NAME: 
+      AREA_CENTER_LAT: 
+      AREA_CENTER_LON: 
+      AREA_HALF_SIZE_M: 
+      SWMM_CATCHMENT_HA_PER_NODE: 
+      SWMM_IMPERVIOUS_PCT: 
+      SWMM_PONDED_AREA_M2: 
+      DATASET_RUNS: 
+      DATASET_SEED: 
+      DATASET_NAME: 
+      DATASET_MAX_PEAK_MM_HR: 
+      DATASET_DOUBLE_FRACTION: 
+    volumes:
+      - :/data:rw
+    networks:
+      - pinnpoint_net
+    command: ["python", "-c", "print('sim image ok')"]
+
+volumes:

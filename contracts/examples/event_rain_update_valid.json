@@ -1,0 +1,7 @@
+{
+  "v": 1,
+  "type": "rain_update",
+  "zone_id": "ZONE-A",
+  "ts": "2023-10-27T10:00:00Z",
+  "intensity_mm_hr": 12.5
+}
