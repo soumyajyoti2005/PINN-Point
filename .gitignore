@@ -1,0 +1,13 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+data/
+!data/.gitkeep
+!data/**/.gitkeep
+.DS_Store
+/data/datasets/
+!/data/datasets/.keep
+PROGRESS.md
