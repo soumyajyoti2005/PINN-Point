@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event Level Update Payload",
+  "type": "object",
+  "properties": {
+    "v": {
+      "type": "integer",
+      "const": 1
+    },
+    "type": {
+      "type": "string",
+      "const": "level_update"
+    },
+    "node_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,50}$"
+    },
+    "ts": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "level_m": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": ["v", "type", "node_id", "ts", "level_m"],
+  "additionalProperties": false,
+  "x-version": "1.0.0"
+}
